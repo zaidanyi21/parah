@@ -270,7 +270,7 @@ class PharosTestnet:
             }
 
             signed_tx = web3.eth.account.sign_transaction(tx, account)
-            raw_tx = web3.eth.send_raw_transaction(signed_tx.rawTransaction)
+            raw_tx = web3.eth.send_raw_transaction(signed_tx.raw_transaction)
             tx_hash = web3.to_hex(raw_tx)
             receipt = web3.eth.wait_for_transaction_receipt(tx_hash, timeout=300)
             block_number = receipt.blockNumber
@@ -303,7 +303,7 @@ class PharosTestnet:
             })
 
             signed_tx = web3.eth.account.sign_transaction(wrap_tx, account)
-            raw_tx = web3.eth.send_raw_transaction(signed_tx.rawTransaction)
+            raw_tx = web3.eth.send_raw_transaction(signed_tx.raw_transaction)
             tx_hash = web3.to_hex(raw_tx)
             receipt = web3.eth.wait_for_transaction_receipt(tx_hash, timeout=300)
             block_number = receipt.blockNumber
@@ -335,7 +335,7 @@ class PharosTestnet:
             })
 
             signed_tx = web3.eth.account.sign_transaction(unwrap_data, account)
-            raw_tx = web3.eth.send_raw_transaction(signed_tx.rawTransaction)
+            raw_tx = web3.eth.send_raw_transaction(signed_tx.raw_transaction)
             tx_hash = web3.to_hex(raw_tx)
             receipt = web3.eth.wait_for_transaction_receipt(tx_hash, timeout=300)
             block_number = receipt.blockNumber
@@ -366,7 +366,7 @@ class PharosTestnet:
             })
 
             signed_tx = web3.eth.account.sign_transaction(approve_tx, account)
-            raw_tx = web3.eth.send_raw_transaction(signed_tx.rawTransaction)
+            raw_tx = web3.eth.send_raw_transaction(signed_tx.raw_transaction)
             tx_hash = web3.to_hex(raw_tx)
             receipt = web3.eth.wait_for_transaction_receipt(tx_hash, timeout=300)
             block_number = receipt.blockNumber
@@ -417,7 +417,7 @@ class PharosTestnet:
             })
 
             signed_tx = web3.eth.account.sign_transaction(swap_tx, account)
-            raw_tx = web3.eth.send_raw_transaction(signed_tx.rawTransaction)
+            raw_tx = web3.eth.send_raw_transaction(signed_tx.raw_transaction)
             tx_hash = web3.to_hex(raw_tx)
             receipt = web3.eth.wait_for_transaction_receipt(tx_hash, timeout=300)
             block_number = receipt.blockNumber
